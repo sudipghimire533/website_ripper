@@ -1,0 +1,592 @@
+
+*** INITILIAED WITH -> http://gyanhub.localhost/home/index.php
+******
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='author'content='Sudip Ghimire' />
+  <meta name='description'content='GyanHub is newly establshed first coworking space in pokhara for indviduals, office metting and much more directed by sudip ghimire.' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <!--------------------------------------------------------------------->
+  <title>GyanHub first Co-working space in pokhara</title>
+  <script type='text/javascript' src='./../assest/jquery.min.js'></script>
+</head>
+<body onload='ready()'>
+  <style>
+  @keyframes rotate{
+    0% { transform: rotate(0deg);border-color: #fff;}
+    12.5% { border-left-color: #000; }
+    25% { border-top-color: #000; }
+    37.5% { border-right-color: #000; }
+    50% { border-color: #000; }
+    62.5% { border-right-color: #fff; }
+    75% { border-top-color: #fff; }
+    87.5% { border-left-color: #fff; }
+    100% { transform: rotate(360deg); border-color: #fff}
+  }
+  #fake_body_cover{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 4;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    opacity: 0.9;
+  }
+  #main_body_loader{
+    border: 10px solid #777;
+    border-radius: 50%;
+    border-top: 10px solid #FFF;
+    width: 100px;
+    height: 100px;
+    animation: rotate 3s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    display: block;
+  }
+  #theme_toggler{
+    z-index: 3;
+    position: fixed;
+    font-size: 28px;
+    color: var(--super-dark);
+    cursor: pointer;
+  }
+</style>
+<div id='main_body_loader'></div>
+<div id='fake_body_cover'>Getting Things Ready...</div>
+<i class='fas fa-lightbulb' id='theme_toggler' onclick='toggleTheme();'></i>
+<div id='pageHeading'>
+  <div id='heading_links'>
+    <div id='externalLinks'>
+      <a href=''><i class='fab fa-facebook media_icons' style="color: #3333FF;"title='facebook'></i></a>
+      <a href=''><i class='fab fa-google media_icons' style="color: #FF3333;"title='google'></i></a>
+      <a href=''><i class='fab fa-twitter media_icons' style="color: #7777FF;"title='twitter'></i></a>
+      <a href=''><i class='fab fa-snapchat media_icons' style="color: #F0D000"title='snapchat'></i></a>
+      <a href=''><i class='fab fa-youtube media_icons' style="color: #FF3333;"title='youtube'></i></a>
+    </div>
+  </div>
+</div>
+<style>
+</style>
+<div id='menuContainer' class='main'>
+  <div id="Menu">
+  	<div class='section' id='left'>
+  		<span class='imgContainer'onclick="window.location='./index.php'">
+  			<span class='fa fa-image img logoFlat'></span>
+  		</span>
+  	</div>
+  	<div class="section" id='right'>
+  		<a class="item"id='item-home' href='/home'>
+  			<span class="text">
+  				Home
+  			</span>
+  		</a>
+      <a class="item"id='item-about' href='/about'>
+        <span class="text">
+          About
+        </span>
+      </a>
+  		<a class="item"id='item-service' href='/service'>
+  			<span class="text">
+  				Service
+  			</span>
+  		</a>
+      <a class="item"id='item-blog' href='/blogs'>
+        <span class="text">
+          Blog
+        </span>
+      </a>
+  		<a class="item"id='item-contact' href='/contact'>
+  			<span class="text">
+  				Contact
+  			</span>
+  		</a>
+      <a class="item"id='item-pricing' href='/pricing'>
+        <span class="text">
+          Plans
+        </span>
+      </a>
+      <span id='item-menu'class='container' onclick='toggleMenu(this)'>
+        <div id="bar1"></div>
+        <div id="bar2"></div>
+        <div id="bar3"></div>
+      </span>
+  	</div>
+  </div>
+</div>
+<script>
+$(window).focus(function() {
+  //user is in our tab
+});
+
+$(window).blur(function() {
+    //alas user left
+});
+  </script>
+  <div id="Home">
+    <div id='row1'class='rows'>
+      <div id='home_cover'>
+        <div class='fake_home_cover'id='one'img='./../images/cover1.jpg'>
+        </div>
+        <div id='two'>
+        </div>
+        <div id='text_container'>
+            <h1 id='home_main_title'>Gyanhub</h1>
+            <h3 id='home_sub_title'>one and only coworing space in city</h3>
+
+            <span class='fader_text'>That Helps you find the inspiration.</span>
+            <span class='fader_text'>That makes you seperate from others.</span>
+            <span class='fader_text'>That keeps you fit to what matters.</span>
+            <span class='fader_text'>That helps you find your potential.</span>
+
+            <h5 id='fader_text_chalkBoard'></h5>
+        </div>
+        <div id='getin_btn_container'>
+          <span id='getin_btn'>
+            <span>Take A tour</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id='row2' class='rows'>
+      <div id='heading'class='lines'>
+        <h1 class='title'>Services Offer</h1>
+        <h3>Whether it’s working for yourself, or remotely, it’s great to be independent. Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done and meet interesting people. All these in one place!</h3>
+      </div>
+    </div>
+    <div id='row3'class='rows'>
+      <div id='block1'class='blocks'>
+        <div class='imgContaner'>
+          <i class='fas fa-wifi'></i>
+        </div>
+        <div id='title'>
+          <h2>Basic</h2>
+        </div>
+        <div id='caption'>
+          <h3>
+            We provide everyone with speed wifi, comfort seat, quick coffee, good music, printer, fax and many more
+          </h3>
+        </div>
+      </div>
+      <div id='block2'class='blocks'>
+        <div class='imgContaner'>
+          <i class='fas fa-chalkboard-teacher'></i>
+        </div>
+        <div id='title'>
+          <h2>24 hrs access</h2>
+        </div>
+        <div id='caption'>
+          <h3>
+            We are available at any time as soon as you fell to be in with us in space cause we are availabe in every moment caring your needs
+          </h3>
+        </div>
+      </div>
+      <div id='block3'class='blocks'>
+        <div class='imgContaner'>
+          <i class='far fa-comments'></i>
+        </div>
+        <div id='title'>
+          <h2>Technical Support</h2>
+        </div>
+        <div id='caption'>
+          <h3>
+            Creating a friendly and human envronment we offers business tools gadgets with well mentorship and guidlines
+          </h3>
+        </div>
+      </div>
+      <div id='block4'class='blocks'>
+        <div class='imgContaner'>
+          <i class='fab fa-envira'></i>
+        </div>
+        <div id='title'>
+          <h2>Mood Fresher</h2>
+        </div>
+        <div id='caption'>
+          <h3>
+            As we are in one of the most easily accessable and most peacefull region we can garuntee you a perfect accomodation
+          </h3>
+        </div>
+      </div>
+      <div id='block5'class='blocks'>
+        <div class='imgContaner'>
+          <i class='fab fa-connectdevelop'></i>
+        </div>
+        <div id='title'>
+          <h2>Events</h2>
+        </div>
+        <div id='caption'>
+          <h3>
+            After that heavy work you will be get refreshed by different programs and events organized
+          </h3>
+        </div>
+      </div>
+      <div id='block6'class='blocks'>
+        <div class='imgContaner'>
+          <i class='fas fa-smoking'></i>
+        </div>
+        <div id='title'>
+          <h2>Confrence Room</h2>
+        </div>
+        <div id='caption'>
+          <h3>
+            We understand all your needs so we are here with modern rooms with choices that fits you the most
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div id='row4'class='rows'>
+      <div class='row_title'>
+        <h1 class='main_title'>What People Say...</h1>
+        <p class='sub_main_title'></p>
+      </div>
+      <div class='testmonils_container'>
+        <div class='testimonils'>
+          <div class='prev_person projector'></div>
+          <div class='current_person projector'></div>
+          <div class='next_person projector'></div>
+          <div id='initial_testimonils_container'>
+            <section class='testimonils_blocks'>
+                <div class='person_container'>
+                  <div class='person_img_container'>
+                    <div class='person_img'>
+                      <img class='person_photo' src='./../about/members_images/developer.png' />
+                    </div>
+                  </div>
+                  <div class='person_details'>
+                    <div class='thoughts_container'>
+                      <span class='thoughts_text'>
+                        It was really a good experience working in the environment of co-working space in Pokhara. Because of the availability of such services in Pokhara I was able to do my project work. Thank you & Best of luck!!! 
+                      </span>
+                    </div>
+                    <div class='info_container'>
+                      <div class='person_name_container'>
+                        <span class='person_name_text'>Ram Gurung</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class='testimonils_blocks'>
+                <div class='person_container'>
+                  <div class='person_img_container'>
+                    <div class='person_img'>
+                      <img class='person_photo' src='./../about/members_images/manager.png' />
+                    </div>
+                  </div>
+                  <div class='person_details'>
+                    <div class='thoughts_container'>
+                      <span class='thoughts_text'>
+                        Had an amazing time there. Never thought of this concept will be available in Pokhara too. I really like the environment and cool mood freshers chores there.
+                      </span>
+                    </div>
+                    <div class='info_container'>
+                      <div class='person_name_container'>
+                        <span class='person_name_text'>Bidhan Prajapati</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class='testimonils_blocks'>
+                <div class='person_container'>
+                  <div class='person_img_container'>
+                    <div class='person_img'>
+                      <img class='person_photo' src='./../about/members_images/ceo.png' />
+                    </div>
+                  </div>
+                  <div class='person_details'>
+                    <div class='thoughts_container'>
+                      <span class='thoughts_text'>
+                        We are some text that say goood about this space or that may also be the feedback to the admin so that it will make more productive website; and some engthy of mediul str.length;
+                      </span>
+                    </div>
+                    <div class='info_container'>
+                      <div class='person_name_container'>
+                        <span class='person_name_text'>three person</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class='testimonils_blocks'>
+                <div class='person_container'>
+                  <div class='person_img_container'>
+                    <div class='person_img'>
+                      <img class='person_photo' src='./../about/members_images/receptionist.png' />
+                    </div>
+                  </div>
+                  <div class='person_details'>
+                    <div class='thoughts_container'>
+                      <span class='thoughts_text'>
+                        We are some text that say goood about this space or that may also be the feedback to the admin so that it will make more productive website; and some engthy of mediul str.length;
+                      </span>
+                    </div>
+                    <div class='info_container'>
+                      <div class='person_name_container'>
+                        <span class='person_name_text'>Jhon Gates</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class='testimonils_blocks'>
+                <div class='person_container'>
+                  <div class='person_img_container'>
+                    <div class='person_img'>
+                      <img class='person_photo' src='./../about/members_images/ceo.png' />
+                    </div>
+                  </div>
+                  <div class='person_details'>
+                    <div class='thoughts_container'>
+                      <span class='thoughts_text'>
+                        We are some text that say goood about this space or that may also be the feedback to the admin so that it will make more productive website; and some engthy of mediul str.length;
+                      </span>
+                    </div>
+                    <div class='info_container'>
+                      <div class='person_name_container'>
+                        <span class='person_name_text'>Jhon Gates</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+          </div>
+        </div>
+        <div class='testimonils_switcher_container'>
+          <div class='testimonils_switcher'>
+            <div class='testimonils_switcher_btn_container'>
+              <span class='testimonils_switcher_btn'></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='row5'class='rows'>
+      <div id='faq'>
+        <h2>People Also Asked</h2>
+        <section class='questions'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)">
+              <h3>
+                <span>What is Co working-space</span>
+                <i class='fas fa-angle-down'></i>
+              </h3>
+            </div>
+            <div class='answers'>
+              <h4>
+                Co-working space is somehow like an office but a way better the usual boring office environment where one can do the official or personal work sharing the same space. Our co-working serves you many services like high-speed internet, beverages, peaceful environment and many more.<br>
+                <a href='#'>source: wikipidea</a>
+              </h4>
+            </div>
+        </div>
+        </section>
+        <section class='questions'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)">
+              <h3>
+                <span>How to become a member</span>
+                <i class='fas fa-angle-down'></i>
+              </h3>
+            </div>
+            <div class='answers'>
+              <h4>
+                You can make your membership in our co-working through the online form. You have to give all the required information that needs to be filled and go with further registration process. For more details you can contact us or email.<br>
+                <a href='#'>source: wikipidea</a>
+              </h4>
+            </div>
+        </div>
+        </section>
+        <section class='questions'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)">
+              <h3><span>What is the opening and closing time?</span><i class='fas fa-angle-down'></i></h3>
+            </div>
+            <div class='answers'>
+              <h4>
+                We are available from the 8:00 am in the morning to 7:00 pm in the evening.<br>
+                <a href='#'>source: wikipidea</a>
+              </h4>
+            </div>
+        </div>
+        </section>
+        <section class='questions'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)">
+              <h3>
+                <span>What/ who is digital nomads?</span>
+                <i class='fas fa-angle-down'></i>
+              </h3>
+            </div>
+            <div class='answers'>
+              <h4>
+                Digital nomads or the one who is travelling workers who use telecommunication technologies for their work. They have to do their work at any place. So, they mostly prefer to work using wireless gadgets like smartphones with internet access or mobile hotspots. And they like to work in co-working spaces, coffee shops, libraries and other places with work environment<br>
+                <a href='#' >source: wikipidea</a>
+              </h4>
+            </div>
+        </div>
+        </section>
+        <section class='questions'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)">
+              <h3>
+                <span>How can i edit smart objects</span>
+                <i class='fas fa-angle-down'></i>
+              </h3>
+            </div>
+            <div class='answers'>
+              <h4>
+                Yes, in fact that a reader will be distracted by the readable content of a page when looking at its layout.<br>
+                <a href='#' >source: wikipidea</a>
+              </h4>
+            </div>
+        </div>
+        </section>
+        <section class='questions'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)">
+              <h3>
+                <span>Do you have events for member?</span>
+                <i class='fas fa-angle-down'></i>
+              </h3>
+            </div>
+            <div class='answers'>
+              <h4>
+                Yes, we offer you every event if there is any. We conduct events like workshops, WordCamps, networking opportunities and member events. Be updated through our sites or connect through mailing list to be notified about the events. <br>
+                <a href='#' >source: wikipidea</a>
+              </h4>
+            </div>
+        </div>
+        </section>
+        <section class='questions'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)">
+              <h3>
+                <span>Does the new membership intake is held only in 1st of the month?</span>
+                <i class='fas fa-angle-down'></i>
+              </h3>
+            </div>
+            <div class='answers'>
+              <h4>
+                No, you can join here on any day of the month or week and we start to count the 30 days then. No worries in the days counting issue.<br>
+                <a href='#'>source: wikipidea</a>
+              </h4>
+            </div>
+        </div>
+        </section>
+        <section class='questions'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)">
+              <h3>
+                <span>How to delete the membership?</span>
+                <i class='fas fa-angle-down'></i>
+              </h3>
+            </div>
+            <div class='answers'>
+              <h4>
+                We are blessed to have you. But if you want to terminate your membership, notify us before 30 days through the email.<br>
+                <a href='#'>source: wikipidea</a>
+              </h4>
+            </div>
+        </div>
+        </section>
+        <section class='questions'id='ask'>
+          <div>
+            <div class='title' onclick="toggleFAQ(this.parentElement)"id='ask_title'>
+              <h3>
+                <span>
+                  <a href='../contact/' style='text-decoration: none;color: inherit;'>Ask a Question</a>
+                </span>
+              </h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class='rows' id='row6'>
+      <div class='row_heading'>
+        <center class='main_row_heading'>
+          <h1>Our Happy clients</h1>
+        </center>
+        <div class='sub_row_heading'></div>
+      </div>
+      <div class='happy_clients_container'>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" alt="abc" />
+            </div>
+            <div class="slide">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" alt="def" />
+            </div>
+            <div class="slide">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" alt="ghi" />
+            </div>
+            <div class="slide">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" alt="jkl" />
+            </div>
+            <div class="slide">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" alt="mno" />
+            </div>
+            <div class="slide">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" alt="pqr" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='rows' id='row7'>
+      <div class='calculator_container'>
+        <div class='calculator_brand'>
+          <span class='major'>We Belive in Hunting Goals</span><br />
+          <span class='minor'>...and counting them</span>
+        </div>
+        <div class='calculator'>
+          <span class='equation'>
+            <span class='eqn_value'>300</span>
+            <span class='eqn_title'>Cups of coffee</span>
+          </span>
+          <span class='equation'>
+            <span class='eqn_value'>300</span>
+            <span class='eqn_title'>Cups of coffee</span>
+          </span>
+          <span class='equation'>
+            <span class='eqn_value'>2300</span>
+            <span class='eqn_title'>Happy Costumers</span>
+          </span>
+          <span class='equation'>
+            <span class='eqn_value'>500</span>
+            <span class='eqn_title'>Sucessfull Projects</span>
+          </span>
+          <span class='equation'>
+            <span class='eqn_value'>10</span>
+            <span class='eqn_title'>Awards Recived</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class='rows' id='row8'>
+      <div class='row_title'>
+        <h1 class='main_title'>What Are You Waiting For...</h1>
+      </div>
+      <div id='final_btn_container'>
+        <a href='./../pricing/' class='final_btn' id='tour'>Take a Tour</a>
+        <a href='./../contact/' class='final_btn' id='contact'>Leave A Message</a>
+      </div>
+    </div>
+  </div>
+  </body>
+<script type='text/javascript' src='./../index.js'></script>
+<link rel='stylesheet' type='text/css' href='./../index.css' />
+<script type='text/javascript' src='./home.js'></script>
+<link rel='stylesheet' type='text/css' href='./home.css' />
+<link rel='stylesheet' type='text/css' href='./../assest/css/all.css' />
