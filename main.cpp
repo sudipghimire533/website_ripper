@@ -14,7 +14,7 @@ using namespace std;
 namespace fs = filesystem;
 
 /******global vars******/
-string save_folder = "/home/sudip/Documents/Projects/htmp_rip_qt/output";
+string save_folder;
 vector<string> prased_urls, failed_urls;
 vector<string> imgs, other, links, medias;
 string server;
@@ -350,10 +350,13 @@ public:
 	}
 	
 } main_page;
-int main(int, char** ) {
+
+int main(int, char** argv ) {
+	save_folder = argv[1];
+	string input_url = argv[2];
+	
 	if( !fs::exists(save_folder) ) assert("\nSave folder do not exist\n");
 	fs::current_path(save_folder);
-	string input_url = "http://gyanhub.localhost/home/index.php";
 	
 	server = Prase::find_protocol(input_url) + "://" +Prase::find_domain(input_url);
 	std::cout << "\n**SERVER SET TO " << server;

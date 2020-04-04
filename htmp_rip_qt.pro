@@ -1,4 +1,4 @@
-Qt += network
+
 CONFIG += c++17
 
 # The following define makes your compiler emit warnings if you use
@@ -15,7 +15,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp
 
-RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
