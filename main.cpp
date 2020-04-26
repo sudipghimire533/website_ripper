@@ -352,8 +352,8 @@ public:
 } main_page;
 
 int main(int, char** argv ) {
-	save_folder = argv[1];
-	string input_url = argv[2];
+	save_folder = argv[2];
+	string input_url = argv[1];
 	
 	if( !fs::exists(save_folder) ) assert("\nSave folder do not exist\n");
 	fs::current_path(save_folder);
